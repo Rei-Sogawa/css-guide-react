@@ -4,6 +4,7 @@ import { Card, CardLink, CardWithBadge } from "./components/composite-module/car
 import { Media, ReverseMedia, HalfMedia } from "./components/composite-module/media";
 
 import cardModuleCss from "./components/composite-module/card/card.module.css";
+import { Table } from "./components/composite-module/table";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </li>
             <li>
               <Link to="/card">Card</Link>
+            </li>
+            <li>
+              <Link to="/table">Table</Link>
             </li>
           </ul>
         </nav>
@@ -45,6 +49,9 @@ function App() {
               <Card className={cardModuleCss["cards__item"]} />
               <CardWithBadge className={cardModuleCss["cards__item"]} />
             </div>
+          </Route>
+          <Route path="/table" exact>
+            <Table />
           </Route>
         </Switch>
       </div>
